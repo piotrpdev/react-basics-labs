@@ -7,17 +7,19 @@ import AddTaskForm from './components/Form';
 function App() {
   const [ taskState, setTaskState ] = useState({
     tasks: [
-      { id: 1, title:"Dishes", description: "Empty dishwasher", deadline: "Today", priority: "Low", done: false },
-      { id: 2, title: "Laundry", description: "Fold clothes and put away", deadline: "Tomorrow", priority: "Medium", done: false },
-      { id: 3, title: "Tidy up", deadline: "Today", priority: "High", done: false}
+      { id: "28fcc217-5ad5-4e48-b98d-25071b879a59", title:"Dishes", description: "Empty dishwasher", deadline: "Today", priority: "Low", done: false },
+      { id: "01e2c5cf-718d-44ca-96a3-0ed671a1dc23", title: "Laundry", description: "Fold clothes and put away", deadline: "Tomorrow", priority: "Medium", done: false },
+      { id: "92b6b2f3-c068-4c37-9994-341a3cb23831", title: "Tidy up", description: "", deadline: "Today", priority: "High", done: false}
     ]
   });
 
   const [ formState, setFormState ] = useState({
+    id: "",
     title: "",
     description: "",
     deadline: "",
-    priority: "Low"
+    priority: "Low",
+    done: false
   });
 
   const formChangeHandler = (event) => {
